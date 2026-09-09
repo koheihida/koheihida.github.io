@@ -10,8 +10,6 @@
 
 ## 内容
 
-特定企業への応募用の構成から、誰にでも共有できる自己紹介へ変更しました。参考にしたのは https://rtakaha.github.io/Rtakaha/ のプロフィール・経験を中心とする情報構成です。参考サイトの文章、画像、コードは転載していません。
-
 掲載内容の確認項目は [docs/content-review.md](docs/content-review.md) にあります。
 
 ## GitHub Pages
