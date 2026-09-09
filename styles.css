@@ -12,7 +12,7 @@
 }
 * { box-sizing: border-box; }
 html { scroll-padding-top: 110px; }
-body { margin: 0; overflow-wrap: anywhere; }
+body { margin: 0; overflow-wrap: break-word; }
 a { color: inherit; text-underline-offset: 5px; }
 a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
 a:hover { color: var(--accent); }
@@ -34,7 +34,7 @@ a:hover { color: var(--accent); }
 .video-toggle[hidden] { display: none; }
 .video-toggle:hover { background: #17120ec9; }
 .video-toggle:focus-visible { outline: 3px solid white; outline-offset: 5px; }
-p { font-size: 16px; line-height: 1.95; margin: 0 0 18px; overflow-wrap: anywhere; word-break: normal; text-wrap: pretty; }
+p { font-size: 16px; line-height: 1.95; margin: 0 0 18px; overflow-wrap: break-word; word-break: keep-all; text-wrap: pretty; }
 .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .18em; color: #e5c7a6; margin-bottom: 18px; }
 h1 { font-size: clamp(52px, 7vw, 86px); line-height: 1.12; letter-spacing: -.055em; font-weight: 700; margin: 0 0 16px; }
 h1 span { color: #e5c7a6; }
@@ -52,19 +52,20 @@ h3 { font-size: 21px; font-weight: 600; line-height: 1.6; margin: 0 0 15px; }
 .profile-name { border-top: 3px solid var(--accent); padding-top: 23px; }
 .profile-photo { display: block; width: 182px; height: 182px; aspect-ratio: 1; object-fit: cover; object-position: 57% center; margin: 0 0 23px; border: 8px solid #f5f7f8; border-radius: 50%; box-shadow: 0 0 0 1px var(--line); filter: saturate(.9); }
 .profile-name .name { font-size: 25px; font-weight: 600; margin-bottom: 3px; }
+.profile-role-line { white-space: nowrap; }
 .profile-name p:not(.name) { color: var(--muted); font-size: 14px; margin-bottom: 22px; }
 .text-link { color: var(--accent); font-size: 14px; }
 .large-copy { font-size: 23px; line-height: 1.75; margin-bottom: 23px; }
 .profile-facts { margin: 0 0 28px; border-top: 1px solid var(--line); }
 .profile-facts > div { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .profile-facts dt { font-size: 13px; font-weight: 600; color: var(--accent); }
-.profile-facts dd { margin: 0; font-size: 15px; color: #4f5f6b; line-height: 1.7; overflow-wrap: anywhere; word-break: normal; }
+.profile-facts dd { margin: 0; font-size: 15px; color: #4f5f6b; line-height: 1.7; overflow-wrap: break-word; word-break: keep-all; }
 .profile-body > p:last-child, .career-entry p:last-child, .activities-layout p:last-child, .note p:last-child { margin-bottom: 0; }
 .section-band { background: var(--band); }
 .career-list { border-top: 1px solid var(--line); }
 .career-entry { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 45px; padding-block: 31px; border-bottom: 1px solid var(--line); }
-.career-label { font-size: 14px; font-weight: 600; color: var(--accent); padding-top: 5px; overflow-wrap: anywhere; word-break: normal; }
-.career-entry p:not(.career-label), .activities-layout p, .note p { color: #4f5f6b; overflow-wrap: anywhere; word-break: normal; }
+.career-label { font-size: 14px; font-weight: 600; color: var(--accent); padding-top: 5px; overflow-wrap: break-word; word-break: keep-all; }
+.career-entry p:not(.career-label), .activities-layout p, .note p { color: #4f5f6b; overflow-wrap: break-word; word-break: keep-all; }
 .skills-list { margin: 0; }
 .skills-list > div { display: grid; grid-template-columns: 225px minmax(0, 1fr); gap: 32px; padding-block: 25px; border-top: 1px solid var(--line); }
 .skills-list > div:last-child { border-bottom: 1px solid var(--line); }
@@ -143,12 +144,12 @@ dd .skill-primary { font-size: 19px; color: var(--ink); }
 .judge-history { margin: 0; }
 .judge-history > div { display: grid; grid-template-columns: 66px minmax(0, 1fr); gap: 12px; padding: 13px 0; border-top: 1px solid var(--line); break-inside: avoid; }
 .judge-history dt { font-size: 12px; color: var(--muted); font-weight: 400; }
-.judge-history dd { font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; word-break: normal; }
+.judge-history dd { font-size: 13px; line-height: 1.7; overflow-wrap: break-word; word-break: keep-all; }
 .judge-history dd span { display: block; font-size: 12px; color: var(--muted); margin-top: 3px; }
 
 .conference-history { margin: 24px 0 0; }
 .conference-history > div { padding: 16px 0; border-top: 1px solid var(--line); break-inside: avoid; }
-.conference-history dt { padding: 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; word-break: normal; }
+.conference-history dt { padding: 0; font-size: 15px; line-height: 1.6; overflow-wrap: break-word; word-break: keep-all; }
 .conference-history dd { margin-top: 4px; color: var(--muted); font-size: 13px; line-height: 1.7; }
 
 .category-caption { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; font-weight: 400; }
