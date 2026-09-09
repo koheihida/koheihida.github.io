@@ -34,7 +34,7 @@ a:hover { color: var(--accent); }
 .video-toggle[hidden] { display: none; }
 .video-toggle:hover { background: #17120ec9; }
 .video-toggle:focus-visible { outline: 3px solid white; outline-offset: 5px; }
-p { font-size: 16px; line-height: 1.95; margin: 0 0 18px; overflow-wrap: anywhere; }
+p { font-size: 16px; line-height: 1.95; margin: 0 0 18px; overflow-wrap: break-word; word-break: keep-all; text-wrap: pretty; }
 .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .18em; color: #e5c7a6; margin-bottom: 18px; }
 h1 { font-size: clamp(52px, 7vw, 86px); line-height: 1.12; letter-spacing: -.055em; font-weight: 700; margin: 0 0 16px; }
 h1 span { color: #e5c7a6; }
@@ -58,13 +58,13 @@ h3 { font-size: 21px; font-weight: 600; line-height: 1.6; margin: 0 0 15px; }
 .profile-facts { margin: 0 0 28px; border-top: 1px solid var(--line); }
 .profile-facts > div { display: grid; grid-template-columns: 90px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .profile-facts dt { font-size: 13px; font-weight: 600; color: var(--accent); }
-.profile-facts dd { margin: 0; font-size: 15px; color: #4f5f6b; line-height: 1.7; overflow-wrap: anywhere; }
+.profile-facts dd { margin: 0; font-size: 15px; color: #4f5f6b; line-height: 1.7; overflow-wrap: break-word; word-break: normal; }
 .profile-body > p:last-child, .career-entry p:last-child, .activities-layout p:last-child, .note p:last-child { margin-bottom: 0; }
 .section-band { background: var(--band); }
 .career-list { border-top: 1px solid var(--line); }
 .career-entry { display: grid; grid-template-columns: 180px 1fr; gap: 45px; padding-block: 31px; border-bottom: 1px solid var(--line); }
-.career-label { font-size: 14px; font-weight: 600; color: var(--accent); padding-top: 5px; }
-.career-entry p:not(.career-label), .activities-layout p, .note p { color: #4f5f6b; }
+.career-label { font-size: 14px; font-weight: 600; color: var(--accent); padding-top: 5px; overflow-wrap: break-word; word-break: normal; }
+.career-entry p:not(.career-label), .activities-layout p, .note p { color: #4f5f6b; overflow-wrap: break-word; word-break: keep-all; }
 .skills-list { margin: 0; }
 .skills-list > div { display: grid; grid-template-columns: 225px 1fr; gap: 32px; padding-block: 25px; border-top: 1px solid var(--line); }
 .skills-list > div:last-child { border-bottom: 1px solid var(--line); }
@@ -137,16 +137,17 @@ dd .skill-primary { font-size: 19px; color: var(--ink); }
 .results-heading { font-size: 14px; margin: 28px 0 14px; font-weight: 600; }
 .competition-result { border-left: 3px solid var(--accent); padding-left: 18px; font-size: 15px; }
 .competition-result > span { display: block; font-size: 12px; color: var(--muted); }
-.competition-result strong { display: block; font-size: 28px; color: var(--ink); }
+.competition-result strong { display: inline; margin-left: 10px; font-size: inherit; color: inherit; font-weight: 600; }
+.competition-result .text-link { display: block; margin-top: 8px; }
 .judge-history { margin: 0; }
 .judge-history > div { display: grid; grid-template-columns: 66px minmax(0, 1fr); gap: 12px; padding: 13px 0; border-top: 1px solid var(--line); break-inside: avoid; }
 .judge-history dt { font-size: 12px; color: var(--muted); font-weight: 400; }
-.judge-history dd { font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.judge-history dd { font-size: 13px; line-height: 1.7; overflow-wrap: break-word; word-break: normal; }
 .judge-history dd span { display: block; font-size: 12px; color: var(--muted); margin-top: 3px; }
 
 .conference-history { margin: 24px 0 0; }
 .conference-history > div { padding: 16px 0; border-top: 1px solid var(--line); break-inside: avoid; }
-.conference-history dt { padding: 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
+.conference-history dt { padding: 0; font-size: 15px; line-height: 1.6; overflow-wrap: break-word; word-break: normal; }
 .conference-history dd { margin-top: 4px; color: var(--muted); font-size: 13px; line-height: 1.7; }
 
 .category-caption { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; font-weight: 400; }
